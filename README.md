@@ -8,9 +8,11 @@ In order to increase the ease of usage, a short video (mp4 format) can be found 
 
 The projects are implemented as much Unit Testtable as possible. Although, there could be more unit tests, current coverage is around 86% according to Visual Studio 2017.
 
+![](doc/images/UnitTestCoverage.JPG)
+
 ### Used Technologies & Nuget Packages
 
-- Visual Stduio 2017
+- Visual Studio 2017
 - .NET Framework 4.6.1
 - Castle.Windsor v4.1.1
 - XUnit v2.4.1
@@ -24,6 +26,9 @@ The projects are implemented as much Unit Testtable as possible. Although, there
 2. Maximum file size is set to 5 MB.
 
 ### Folder Structure
+
+![](doc/images/Folders.JPG)
+
 1. **build:** Contains the extracted files after build process. Debug and Release versions can be found here
 2. **doc**: Related document files such as images and testing import data are stored here. You can also find the PDF version of this README.md.
 3. **packages**: These are the NuGet packages of the solution
@@ -31,6 +36,9 @@ The projects are implemented as much Unit Testtable as possible. Although, there
 5. **test**: The unit test projects are in here. Just like **src**: folder, these also will be displayed when *.sln file is opened.
 
 ### Solution Structure
+
+![](doc/images/Solution.JPG)
+
 1. **Core.Model**: Currently, only exception models are in here. But in a larger project some contracts, enums or entities can be placed here for shared usage purposes.
 2. **Core.Util**: Some shared extension classes are store in there.
 3. **Infrastructure.DataConnector**: This project is intented to cover Resource connections like Database, File, etc. Even though, currently we use onlye File connection, this project can easily be extented for MongoDb, Redis or any other data sources.
@@ -42,9 +50,9 @@ The projects are implemented as much Unit Testtable as possible. Although, there
 
 ### Running
 
-You can either run it from Visual Studio or directly from the executable file.
+You can either run it from Visual Studio or directly from the executable file sent by email.
 In order to run it from exe file:
-1. Either extract and run the 'UI.Win.DataPresenter.exe' file separaratly sent zip file `Executables.zip` or the same file within 'build/Release' folder.
+1. Either extract and run the `UI.Win.DataPresenter.exe` file separaratly sent zip file `Executables.zip` or the same file within 'build/Release' folder.
 
 In order to run it properly from Visual Studio:
 1. Set **UI.Win.DataPresenter** as Startup Project and with or without debugging Start 
