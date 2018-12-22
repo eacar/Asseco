@@ -41,11 +41,12 @@
             this.groupBox_Search = new System.Windows.Forms.GroupBox();
             this.button_Search = new System.Windows.Forms.Button();
             this.label_SearchResult = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.groupBox_Data = new System.Windows.Forms.GroupBox();
             this.dataGridView_Subscribers = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox_FileLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ThreadCount)).BeginInit();
             this.groupBox_Search.SuspendLayout();
@@ -61,6 +62,7 @@
             this.groupBox_FileLoad.Controls.Add(this.label_FailCount);
             this.groupBox_FileLoad.Controls.Add(this.label_SuccessCount);
             this.groupBox_FileLoad.Controls.Add(this.label4);
+            this.groupBox_FileLoad.Controls.Add(this.label6);
             this.groupBox_FileLoad.Controls.Add(this.label1);
             this.groupBox_FileLoad.Controls.Add(this.button_LoadFile);
             this.groupBox_FileLoad.Location = new System.Drawing.Point(13, 12);
@@ -94,7 +96,7 @@
             0,
             0});
             this.numericUpDown_ThreadCount.Name = "numericUpDown_ThreadCount";
-            this.numericUpDown_ThreadCount.Size = new System.Drawing.Size(73, 20);
+            this.numericUpDown_ThreadCount.Size = new System.Drawing.Size(38, 20);
             this.numericUpDown_ThreadCount.TabIndex = 2;
             this.numericUpDown_ThreadCount.Value = new decimal(new int[] {
             10,
@@ -194,6 +196,15 @@
             this.label_SearchResult.TabIndex = 1;
             this.label_SearchResult.Text = "--";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Toplam Borç:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -235,14 +246,14 @@
             this.dataGridView_Subscribers.Size = new System.Drawing.Size(553, 264);
             this.dataGridView_Subscribers.TabIndex = 0;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Toplam Borç:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(130, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "(Max. 5 MB)";
             // 
             // FormMain
             // 
@@ -288,6 +299,7 @@
         private System.Windows.Forms.GroupBox groupBox_Data;
         private System.Windows.Forms.DataGridView dataGridView_Subscribers;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

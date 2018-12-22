@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using UI.Win.DataPresenter.IoC;
 
@@ -192,5 +193,43 @@ namespace UI.Win.DataPresenter
         }
 
         #endregion
+
+        private void Generate()
+        {
+            var rnd = new Random();
+            const string baseStr = "D{SubscriptionNo}00000016{Debt}{DueDate}004{Year}{InvoiceNumber}";
+            var sb = new StringBuilder();
+
+            for (int i = 0; i < 25000; i++)
+            {
+                sb.AppendLine(baseStr
+                    .Replace("{SubscriptionNo}", RandomStrings("0123456789", 9, 9, rnd))
+                    .Replace("{Debt}", RandomStrings("0123456789", 15, 15, rnd))
+                    .Replace("{DueDate}", "11-01-" + RandomStrings("01234", 4, 4, rnd))
+                    .Replace("{Year}", RandomStrings("123456789", 4, 4, rnd))
+                    .Replace("{InvoiceNumber}", RandomStrings("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-", 11, 11, rnd))
+                    );
+            }
+
+            var result = sb.ToString();
+        }
+        private static string RandomStrings(
+            string allowedChars,
+            int minLength,
+            int maxLength,
+            Random rng)
+        {
+            char[] chars = new char[maxLength];
+            int setLength = allowedChars.Length;
+
+            int length = rng.Next(minLength, maxLength + 1);
+
+            for (int i = 0; i < length; ++i)
+            {
+                chars[i] = allowedChars[rng.Next(setLength)];
+            }
+
+            return  new string(chars, 0, length);
+        }
     }
 }
