@@ -73,7 +73,7 @@ namespace Provider.Subscription.Logic
                     var fileContent = await connector.ReadFile(filePath, _encoding, _maxFileSizeInBtyes);
                     //This is an assumption that the correct form of a content is always spacefree
                     fileContent = fileContent.Trim().Replace(" ", "");
-                    string[] stringSeparators = {"\r\n"};
+                    string[] stringSeparators = {"\n"};
                     var lines = fileContent.Split(stringSeparators, StringSplitOptions.None);
 
                     #endregion
