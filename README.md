@@ -23,7 +23,7 @@ The projects are implemented as much Unit Testtable as possible. Although there 
 ### Assumptions
 
 1. Client's computer has Windows 7 or above. (See https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies)
-2. Client's computer has .NET Framework 4.6.1 or above CLR installed.
+2. Client's computer has .NET CLR version 4 installed.
 3. Only .txt files are used to import. So, OpenDialog only allows .txt files.
 4. Maximum file size is set to 5 MB.
 5. Exception Logs are only displayed as a Dialog and NOT saved into files.
