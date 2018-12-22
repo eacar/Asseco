@@ -36,6 +36,7 @@ The projects are implemented as much Unit Testtable as possible. Although there 
 4. **src**: Source files of the solution stored here. When *.sln file is opened, this folder will be displayed in the solution
 5. **test**: The unit test projects are in here. Just like **src**: folder, these also will be displayed when *.sln file is opened.
 
+
 ### Solution Structure
 
 ![](doc/images/Solution.JPG)
